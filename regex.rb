@@ -1,8 +1,8 @@
 def replacer(string)
 	regex = /[aeiou]/
-	puts string.gsub(regex,"*")
+	puts string.downcase.gsub(regex,"*")
 end
 
 puts "Enter a String"
-input_string = gets.chomp.downcase
+input_string = gets.chomp
 replacer(input_string)

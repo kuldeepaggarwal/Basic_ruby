@@ -3,7 +3,7 @@ def fib (limit)
 	puts @last_num
 	loop do
 	 	result = yield( @last_num +  @sec_last )
-		break if result >= limit
+		break if result > limit
 		puts result
 		@sec_last = @last_num
 		@last_num = result
