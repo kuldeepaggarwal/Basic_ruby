@@ -1,9 +1,9 @@
 def fact(n)
-  if n == 0
-    1
-  else
-    n * fact(n - 1)
+  fact = 1
+  (1..n).each do | value |
+    fact *= value
   end
+  fact
 end
 puts "Enter the number for pascal triangle"
 input = gets.chomp.to_i
