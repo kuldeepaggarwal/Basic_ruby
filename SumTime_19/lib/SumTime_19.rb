@@ -3,7 +3,7 @@ def sum(time1 = "00:00:00", time2 = "00:00:00")
   time2 = "0" + time2 if time2.index(":") != 2
   time_pattern = /^([2][0-3]|[0-1][0-9]):[0-5][0-9]:[0-5][0-9]$/
   if time1.match(time_pattern) && time2.match(time_pattern)
-  	sum = [""]
+    sum = [""]
   	time1 = time1.split(":")
     time2 = time2.split(":")
     sum[2] = time2[2] + time1[2]
