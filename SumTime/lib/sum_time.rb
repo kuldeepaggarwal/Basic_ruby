@@ -1,7 +1,7 @@
 def sum(time1 = "00:00:00", time2 = "00:00:00")
   time1 = "0" + time1 if time1.index(":") != 2
   time2 = "0" + time2 if time2.index(":") != 2
-  time_pattern = /^([2][0-3]|[0-1][0-1]):[0-5][0-9]:[0-5][0-9]$/
+  time_pattern = /^([2][0-3]|[0-1][0-9]):[0-5][0-9]:[0-5][0-9]$/
   if time1.match(time_pattern) && time2.match(time_pattern)
   	sum = []
   	time1 = time1.split(":")
@@ -14,8 +14,7 @@ def sum(time1 = "00:00:00", time2 = "00:00:00")
     sum[2] = sum[2].modulo(60)
     sum[1] = sum[1].modulo(60)
     sum[0] = sum[0].modulo(24)
-    print sum.join(":")
-    puts
+    puts sum.join(":")
   else
     puts "Entered incorrect time format in either of the dates"
   end
