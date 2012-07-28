@@ -1,7 +1,7 @@
 class String
-	def to_s
-		self.swapcase
-	end
+  def to_s
+    self.swapcase
+  end
 end
 
 puts "Enter the string"
