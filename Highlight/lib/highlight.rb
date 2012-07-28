@@ -5,7 +5,7 @@ def highlight(original_string, highlighting_string)
     "#{match.replace("(#{match})")}"
   end
   puts temp
-  puts "Total occurences: #{@total_occurence}"
+  puts "Total occurences found: #{@total_occurence}"
 end
 puts "Enter the String"
 input_string = gets.chomp
