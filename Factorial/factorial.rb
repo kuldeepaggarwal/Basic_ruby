@@ -1,9 +1,9 @@
 def factorial(num)
-	fact = 1
-	(1..num).each do | value |
-		fact *= value
-	end
-	fact
+  fact = 1
+  (1..num).each do | value |
+    fact *= value
+  end
+  fact
 end
 puts "Enter the number:"
 input = gets.chomp.to_i
