@@ -3,7 +3,7 @@ def palindrome(string)
   if string.downcase == string.reverse.downcase
     "#{string} is Palindrome"
   else 
-     "#{string} is not Palindrome"
+    "#{string} is not Palindrome"
   end
 end
 puts "Enter the string ('q'/'Q' for quit)"
