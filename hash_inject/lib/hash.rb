@@ -1,10 +1,9 @@
 class Array
 	def to_hash
-		hash = Array.new(Array.new());
-		hash1 = [["x", 5], ["abc", "def", 234]]
+		hash = Hash.new(Array.new)
 		for i in self
-			hash[i.to_s.size].push(i)
+			hash[i.to_s.size] += [i]
 		end
-		 puts hash1[0]
+		 puts hash.inject
 	end	
 end
