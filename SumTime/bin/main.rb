@@ -3,4 +3,4 @@ print "Enter first time ([H]H:MM:SS):"
 time1 = gets.chomp
 print "Enter first time ([H]H:MM:SS):"
 time2 = gets.chomp
-sum(time1, time2)
+puts sum(time1, time2)

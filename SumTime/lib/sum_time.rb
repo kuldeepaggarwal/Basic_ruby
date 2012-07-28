@@ -14,7 +14,7 @@ def sum(time1 = "00:00:00", time2 = "00:00:00")
     sum[2] = sum[2].modulo(60)
     sum[1] = sum[1].modulo(60)
     sum[0] = sum[0].modulo(24)
-    puts sum.join(":")
+    sum.join(":")
   else
     puts "Entered incorrect time format in either of the dates"
   end
