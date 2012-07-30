@@ -1,9 +1,9 @@
 require "time"
 def sum(time1, time2)
-  time1 = Time.parse(time1)
-  time2 = Time.parse(time2)
-  time_pattern = /^([2][0-3]|[0-1][0-9]):[0-5][0-9]:[0-5][0-9]$/
-  if time1.strftime("%H:%M:%S").match(time_pattern) && time2.strftime("%H:%M:%S").match(time_pattern)
+  time_pattern = /^([2][0-3]|[0-1]?[0-9]):[0-5]?[0-9]:[0-5]?[0-9]$/
+  if time1.match(time_pattern) && time2.match(time_pattern)
+    time1 = Time.parse(time1)
+    time2 = Time.parse(time2)
     sum = []
     sum[2] = time2.sec + time1.sec
     sum[1] = ((sum[2].div(60)) + time2.min + time1.min)

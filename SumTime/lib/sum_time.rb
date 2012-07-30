@@ -1,12 +1,11 @@
-#def format_time(array)
- # array.each { |part| part = "0" + part if part.to_s.length == 1}
-#end
 require "time"
+
 def sum(time1 , time2 )
-  time1 = Time.parse(time1)
-  time2 = Time.parse(time2)
-  time_pattern = /^([2][0-3]|[0-1][0-9]):[0-5][0-9]:[0-5][0-9]$/
-  if time1.strftime("%H:%M:%S").match(time_pattern) && time2.strftime("%H:%M:%S").match(time_pattern)
+  
+  time_pattern = /^([2][0-3]|[0-1]?[0-9]):[0-5]?[0-9]:[0-5]?[0-9]$/
+  if time1.match(time_pattern) && time2.match(time_pattern)
+    time1 = Time.parse(time1)
+    time2 = Time.parse(time2)
     sum = []
     sum[2] = time2.sec + time1.sec
     sum[1] = ((sum[2].div(60)) + time2.min + time1.min)
@@ -16,7 +15,7 @@ def sum(time1 , time2 )
     sum[2] = (sum[2].modulo(60))
     sum[1] = (sum[1].modulo(60))
     sum[0] = (sum[0].modulo(24))
-    sum = Time.parse(sum.join(":")).strftime("%H:%M:%S")
+    sum = Time.parse(sum.join(":")).strftime("%T")
   else
     puts "Entered incorrect time format in either of the dates"
   end
