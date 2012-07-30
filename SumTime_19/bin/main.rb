@@ -17,5 +17,5 @@ else
     no_of_days += temp_hash["days"]
     times << temp_hash["times"] 
   end
-  puts "#{no_of_days} days & #{dates.join(":")}"
+  puts "#{no_of_days} days & #{times.join(":")}"
 end

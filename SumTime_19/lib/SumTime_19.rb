@@ -14,7 +14,7 @@ def sum(time1, time2)
     sum[0] = (sum[0].modulo(24))
     sum = Time.parse(sum.join(":")).strftime("%H:%M:%S")
     a = {}
-    a["date"] = sum
+    a["times"] = sum
     a["days"] = day
     a
   else
