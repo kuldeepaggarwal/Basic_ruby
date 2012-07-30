@@ -1,7 +1,6 @@
 class Name 
-  def initialize(firstname, lastname)
-    @firstname = firstname
-    @lastname = lastname
-    puts "Name is initialized with firstname capitalized"
-  end
+	attr_writer :firstname, :lastname
+	def to_s
+		"Firstname: #{@firstname} and Lastname: #{@lastname} has been set"
+	end
 end

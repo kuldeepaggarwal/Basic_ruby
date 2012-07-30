@@ -7,5 +7,8 @@ begin
   print "Enter the Lastname: "
   lastname = gets.chomp
   raise SyntaxError, "Lastname cannot be empty" if lastname == ""
-  name = Name.new(firstname, lastname)
+  name = Name.new
+  name.firstname = firstname
+  name.lastname = lastname
+  puts name
 end
