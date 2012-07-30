@@ -3,16 +3,14 @@
 #end
 require "time"
 def sum(time1 , time2 )
-  time1 = Time.parse(time1).strftime("%H:%M:%S")
-  time2 = Time.parse(time2).strftime("%H:%M:%S")
+  time1 = Time.parse(time1)
+  time2 = Time.parse(time2)
   time_pattern = /^([2][0-3]|[0-1][0-9]):[0-5][0-9]:[0-5][0-9]$/
-  if time1.match(time_pattern) && time2.match(time_pattern)
+  if time1.strftime("%H:%M:%S").match(time_pattern) && time2.strftime("%H:%M:%S").match(time_pattern)
     sum = []
-    time1 = time1.split(":")
-    time2 = time2.split(":")
-    sum[2] = time2[2].to_i + time1[2].to_i
-    sum[1] = ((sum[2].div(60)) + time2[1].to_i + time1[1].to_i)
-    sum[0] = ((sum[1].div(60)) + time2[0].to_i + time1[0].to_i)
+    sum[2] = time2.sec + time1.sec
+    sum[1] = ((sum[2].div(60)) + time2.min + time1.min)
+    sum[0] = ((sum[1].div(60)) + time2.hour + time1.hour)
     day = sum[0].div(24)
     print day.to_s + " day & " if day > 0
     sum[2] = (sum[2].modulo(60))
