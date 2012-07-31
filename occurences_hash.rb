@@ -1,7 +1,7 @@
 def occurence(string)
   hash_container = Hash.new(0)
   string.each_char do |chr| 
-    hash_container[chr] += 1 
+    hash_container[chr] += 1 if chr!= " "
   end
   puts hash_container
 end
