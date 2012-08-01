@@ -1,18 +1,16 @@
 def fib (limit)
-  puts @sec_last
-  puts @last_num
+  puts @sec_last = 0
+  puts @last_num = 1
   loop do
-    result = @last_num +  @sec_last
-    yield (result)
+    puts result = yield
     @sec_last = @last_num
     @last_num = result
   end
 end
 
 puts "Fibonacci Series upto 1000:"
-@last_num = 1
-@sec_last = 0
-fib(limit_upto = 1000) { |num| break if num > limit_upto
-  puts num
-}
+fib(limit_upto = 1000) do 
+  break if @last_num + @sec_last > limit_upto
+  @last_num + @sec_last
+end
 
