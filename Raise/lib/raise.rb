@@ -1,7 +1,7 @@
 class Name 
   attr_writer :firstname, :lastname
   def initialize
-  	print "Enter the Firstname: "
+    print "Enter the Firstname: "
     firstname = gets.strip
     print "Enter the Lastname: "
     lastname = gets.strip
